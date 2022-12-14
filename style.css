@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
+}
+
+:root{
+    --FontColorOne: #FFFCF9;
+    --FontColorTwo: #131212;
+
+    --BaseButtonOne: #EF476F;
+    --HoverButtonOne: #cf3c5e;
+    --ShadowButtonOne: #b03350;
+
+    --BaseButtonTwo: #FFD166;
+    --HoverButtonTwo: #edc260;
+    --ShadowButtonTwo: #dab358;
+
+    --BaseButtonThree: #06D6A0;
+    --HoverButtonThree: #03eaac;
+    --ShadowButtonThree: #05a077;
+
+    --BaseButtonFour: #26547C;
+    --HoverButtonFour: #336b9c;
+    --ShadowButtonFour: #1a3c5a;
+
+    --NavColor: #8B4E76;
+    --NavShadow: #311a28;
+
+    --ScoreColor:var(--BaseButtonThree);
+    --ScoreBackgroundColor: #00000054;
+}
+
+body{
+    overflow: hidden;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+
+    background-color: var(--NavColor);
+    color:var(--FontColorOne);
+    font-size: xx-large;
+
+    padding:3vh;
+
+    box-shadow: var(--NavShadow) 3px 3px 5px; 
+
+    position: relative;
+    z-index: 10;
+}
+
+.button{
+    width: 35vw;
+    height: 15vh;
+
+    transition: .1s;
+
+    border: none;
+    border-radius: .5vw;
+
+    color: var(--FontColorOne);
+    font-size: x-large;
+}
+
+.button:hover{
+    scale: 1.05;
+}
+
+.button:nth-child(1){
+    background-color: var(--BaseButtonOne);
+    box-shadow: var(--ShadowButtonOne) 3px 3px 3px;
+}
+
+.button:nth-child(2){
+    background-color: var(--BaseButtonTwo);
+    box-shadow: var(--ShadowButtonTwo) 3px 3px 3px;
+}
+
+.button:nth-child(3){
+    background-color: var(--BaseButtonThree);
+    box-shadow: var(--ShadowButtonThree) 3px 3px 3px;
+}
+
+.button:nth-child(4){
+    background-color: var(--BaseButtonFour);
+    box-shadow: var(--ShadowButtonFour) 3px 3px 3px;
+}
+
+#QuestionContainer{
+    display: grid;
+    place-content: center;
+
+    height: 100vh;
+
+    z-index: -10;
+
+    text-align: center;
+
+    transition: .5s;
+}
+
+#StatsPage{
+    transition: .5s;
+
+    display: grid;
+    place-content: center;
+
+    height: 100vh;
+
+    font-size: xx-large;
+    text-align: center;
+    gap: 10vh;
+}
+
+#buttonWrapper{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2vw;
+
+    margin: 5vw;
+}
+
+#Question{
+    font-size: xx-large;
+    color: var(--FontColorTwo);
+}
+
+#scoreWrapper{
+    position: relative;
+    width: 25vw;
+    height: fit-content;
+
+    transition: .1s;
+
+    overflow: hidden;
+}
+
+
+#score{
+    background-color: var(--ScoreColor);
+    border-radius: 5vw;
+    width: inherit;
+    max-width: 100%;
+    height: 5vh;
+
+    transition: .1s;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    z-index: 10;
+
+    transition: .1s;
+}
+
+#scoreBackground{
+    background-color: var(--ScoreBackgroundColor);
+    width: 25vw;
+    height: 5vh;
+    border-radius: 5vw;
+
+    z-index: 5;
+}
+
+#scoreText{
+    position: absolute;
+
+    top: 0;
+    left:0;
+
+    width: inherit;
+    height: 5vh;
+
+    text-align: center;
+
+    z-index: 15;
+}
+
+#Reset{
+    background-color: var(--BaseButtonThree);
+    box-shadow: var(--ShadowButtonThree) 3px 3px 5px;
+}
